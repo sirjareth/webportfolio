@@ -9,19 +9,33 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"> -->
+	<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
+	
 	<!-- External CSS -->
 	<link rel="stylesheet" href="index.css">
+	<!-- Favicon -->
+	<link href="https://placehold.co/32x32/060e20/3bbffa?text=JR" rel="icon" type="image/x-icon"/>
+	<!-- Devicon -->
+	<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+	
+	<!-- Open Graph Meta Tags -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="My Webportfolio">
+	<meta property="og:url" content="https://sirjareth.github.io/webportfolio-rev/">
+	<meta property="og:image" content="https://raw.githubusercontent.com/sirjareth/webportfolio-rev/master/images/tamtechpic.png">
+	<meta property="og:description" content="Jareth Ronquillo | Web Portfolio">
 </head>
 <body>
 
 	<!-- Navbar Section Start -->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+	<nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="mainNav">
 		<div class="container">
 
 			<!-- Brand / Logo -->
-			<a class="navbar-brand" href="#landing">MyPortfolio</a>
+			<a class="navbar-brand" href="#landing"><strong>Port</strong>folio</a>
+
 
 			<!-- Hamburger button (for mobile) -->
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,6 +49,7 @@
 					<a class="nav-link" href="#projects">Projects</a>
 					<a class="nav-link" href="#tools">Tools</a>
 					<a class="nav-link" href="#contact">Contact</a>
+					<a href="./Jareth Ronquillo - Resume.pdf" class="btn-resume" target="_blank">Resume</a>
 				</div>
 			</div>
 
@@ -46,19 +61,23 @@
 	<main>
 
 		<!-- Landing Section Start -->
-		<div class="container-fluid px-0 min-vh-100" id="landing">
-			<div class="row align-items-center justify-content-center  mx-0 h-100">
+		<div class="container-fluid  d-flex" id="landing">
+			<div class="row justify-content-center mx-0 w-100 ">
 
 				<!-- Profile Image -->
-				<div class="col-12 col-md-5 py-1 text-center">
+				<div class="col-12 col-md-4  text-center">
 					<img src="./images/tamtechpic.png" class="rounded-circle profile-img" alt="Jareth Ronquillo">
 				</div>
 
 				<!-- Landing Text -->
-				<div class="col-12 col-md-7 py-1 text-center text-md-start">
-					<h1>Jareth Ronquillo</h1>
-					<h3>Full Stack Web Developer</h3>
-					<p>A passionate web developer based in Oriental Mindoro. I craft clean, functional, and user-friendly web applications using modern technologies. Always learning, always building.</p>
+				<div class="col-12 col-md-6  text-center text-md-start">
+				    <p class="landing-role"><strong>Full Stack</strong> Web Developer</p>
+				    <h1>Hi, I'm <span class="landing-name-teal">Jareth Ronquillo</span></h1>
+				    <p class="landing-desc">A passionate web developer based in Oriental Mindoro. I craft clean, functional, and user-friendly web applications using modern technologies. Always learning, always building.</p>
+				    <div class="mt-5">
+				        <a href="#projects" class="btn-work me-3">View My Work</a>
+				        <a href="./Jareth Ronquillo - Resume.pdf" target="_blank" class="btn-resume-outline">View My Resume</a>
+				    </div>
 				</div>
 
 			</div>
@@ -71,8 +90,9 @@
 				<div class="row p-3 p-md-5">
 
 					<!-- Section Title -->
-					<div class="col-12 text-center mb-4">
-						<h1>My Projects</h1>
+					<div class="col-12 mb-4">
+					    <p class="section-label">Portfolio</p>
+					    <h1><span class="title-white">My</span> <span class="title-teal">Projects</span></h1>
 					</div>
 
 					<!-- Project Card 1 -->
@@ -160,11 +180,12 @@
 		<!-- Tools Section Start -->
 		<div class="container-fluid px-0" id="tools">
 			<div class="container">
-				<div class="row p-3 p-md-5 text-center">
+				<div class="row p-3 p-md-5">
 
 					<!-- Section Title -->
-					<div class="col-12 text-center mb-4">
-						<h1>Tools</h1>
+					<div class="col-12 mb-4">
+					    <p class="section-label">My Tools</p>
+					    <h1><span class="title-white">Tech</span> <span class="title-teal">Stack</span></h1>
 					</div>
 
 					<!-- Front End -->
@@ -188,54 +209,66 @@
 
 					<!-- Back End -->
 					<div class="col-12 col-md-6 mb-4">
-						<h4 class="mb-4">Back End</h4>
-						<div class="d-flex flex-wrap gap-3 justify-content-center">
-							<div class="card text-center p-3 tool-card">
-								<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java">
-								<small>Java</small>
-							</div>
-							<div class="card text-center p-3 tool-card">
-								<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" alt="C#">
-								<small>C#</small>
-							</div>
-							<div class="card text-center p-3 tool-card">
-								<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL">
-								<small>MySQL</small>
-							</div>
-							<div class="card text-center p-3 tool-card">
-								<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" alt="Postman">
-								<small>Postman</small>
-							</div>
-						</div>
+					    <h4 class="mb-4">Back End</h4>
+					    <div class="d-flex flex-wrap gap-3 justify-content-center">
+					        <div class="card text-center p-3 tool-card">
+					            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java">
+					            <small>Java</small>
+					        </div>
+					        <div class="card text-center p-3 tool-card">
+					            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" alt="C#">
+					            <small>C#</small>
+					        </div>
+					        <div class="card text-center p-3 tool-card">
+					            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL">
+					            <small>MySQL</small>
+					        </div>
+					        <div class="card text-center p-3 tool-card">
+					            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" alt="MongoDB">
+					            <small>MongoDB</small>
+					        </div>
+					        <div class="card text-center p-3 tool-card">
+					            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" alt="Express">
+					            <small>Express</small>
+					        </div>
+					        <div class="card text-center p-3 tool-card">
+					            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" alt="Vue">
+					            <small>Vue.js</small>
+					        </div>
+					        <div class="card text-center p-3 tool-card">
+					            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node">
+					            <small>Node.js</small>
+					        </div>
+					    </div>
 					</div>
 
 					<!-- Other Tools -->
 					<div class="col-12 mb-4 mt-3">
-						<h4 class="mb-4">Other Tools</h4>
-						<div class="d-flex flex-wrap gap-3 justify-content-center">
-							<div class="card text-center p-3 tool-card">
-								<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="VS Code">
-								<small>VS Code</small>
-							</div>
-							<div class="card text-center p-3 tool-card">
-								<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualstudio/visualstudio-plain.svg" alt="Visual Studio">
-								<small>Visual Studio</small>
-							</div>
-							<div class="card text-center p-3 tool-card">
-								<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg" alt="IntelliJ">
-								<small>IntelliJ IDEA</small>
-							</div>
-							<div class="card text-center p-3 tool-card">
-								<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netbeans/netbeans-original.svg" alt="NetBeans">
-								<small>NetBeans</small>
-							</div>
-						</div>
+					    <h4 class="mb-4">Other Tools</h4>
+					    <div class="d-flex flex-wrap gap-3 justify-content-center">
+					        <div class="card text-center p-3 tool-card">
+					            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="VS Code">
+					            <small>VS Code</small>
+					        </div>
+					        <div class="card text-center p-3 tool-card">
+					            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualstudio/visualstudio-plain.svg" alt="Visual Studio">
+					            <small>Visual Studio</small>
+					        </div>
+					        <div class="card text-center p-3 tool-card">
+					            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg" alt="IntelliJ">
+					            <small>IntelliJ IDEA</small>
+					        </div>
+					        <div class="card text-center p-3 tool-card">
+					            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netbeans/netbeans-original.svg" alt="NetBeans">
+					            <small>NetBeans</small>
+					        </div>
+					        <!-- Postman — inilipat mula sa Backend -->
+					        <div class="card text-center p-3 tool-card">
+					            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" alt="Postman">
+					            <small>Postman</small>
+					        </div>
+					    </div>
 					</div>
-
-				</div>
-			</div>
-		</div>
-		<!-- Tools Section End -->
 
 		<!-- Contact Section Start -->
 		<div class="container-fluid px-0" id="contact">
@@ -243,8 +276,9 @@
 				<div class="row p-3 p-md-5">
 
 					<!-- Section Title -->
-					<div class="col-12 text-center mb-4">
-						<h1>Contact</h1>
+					<div class="col-12 mb-4">
+						<p class="section-label">Get In Touch</p>
+						<h1><span class="title-white">Contact</span> <span class="title-teal">Me</span></h1>
 					</div>
 
 					<!-- Google Map -->
@@ -263,30 +297,43 @@
 						<form>
 							<!-- Name -->
 							<div class="mb-3">
-								<label for="contactName" class="form-label">Name</label>
-								<input type="text" class="form-control" id="contactName" placeholder="Enter your name">
+								<!-- <label for="contactName" class="form-label">Name</label> -->
+								<input type="text" class="form-control" id="contactName" placeholder="Your Name">
 							</div>
 
 							<!-- Email -->
 							<div class="mb-3">
-								<label for="contactEmail" class="form-label">Email</label>
-								<input type="email" class="form-control" id="contactEmail" placeholder="example@gmail.com">
+								<!-- <label for="contactEmail" class="form-label">Email</label> -->
+								<input type="email" class="form-control" id="contactEmail" placeholder="Your Email">
 							</div>
 
 							<!-- Subject -->
 							<div class="mb-3">
-								<label for="contactSubject" class="form-label">Subject</label>
-								<input type="text" class="form-control" id="contactSubject" placeholder="Enter subject">
+								<!-- <label for="contactSubject" class="form-label">Subject</label> -->
+								<input type="text" class="form-control" id="contactSubject" placeholder="Subject">
 							</div>
 
 							<!-- Message -->
 							<div class="mb-3">
-								<label for="contactMessage" class="form-label">Message</label>
-								<textarea class="form-control" id="contactMessage" rows="4" placeholder="Enter your message"></textarea>
+								<!-- <label for="contactMessage" class="form-label">Message</label> -->
+								<textarea class="form-control" id="contactMessage" rows="4" placeholder="Your Message"></textarea>
 							</div>
 
 							<!-- Submit Button -->
-							<button type="button" class="btn btn-primary">Send Message</button>
+							<button type="button" class="btn-contact">Send Message</button>
+
+							<!-- Socials -->
+							<div class="d-flex gap-2 mt-4">
+							  <a href="https://github.com/sirjareth" class="social-btn" title="GitHub" target="_blank">
+							  	
+							  	<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" />
+							  	
+							  </a>
+							  <a href="https://www.linkedin.com/feed/" class="social-btn" title="LinkedIn" target="_blank">
+							  	<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-plain.svg" />
+							  </a>
+							  
+							</div>
 						</form>
 					</div>
 
